@@ -1,0 +1,108 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cream text-charcoal font-body antialiased;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JhaW4iIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuOSIgbnVtT2N0YXZlcz0iNCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiIG9wYWNpdHk9IjAuMDMiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhaW4pIi8+PC9zdmc+');
+  }
+  
+  h1, h2, h3 {
+    @apply font-serif text-charcoal;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl font-bold;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl font-semibold;
+  }
+  
+  h3 {
+    @apply text-2xl font-semibold;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-terracotta hover:bg-terracotta-dark text-white px-6 py-3 rounded-soft 
+           font-sans font-semibold transition-all duration-300 shadow-sm 
+           hover:shadow-md active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply bg-sage hover:bg-sage-dark text-white px-6 py-3 rounded-soft 
+           font-sans font-semibold transition-all duration-300;
+  }
+  
+  .card {
+    @apply bg-white rounded-soft shadow-sm p-6 border border-cream-dark 
+           hover:shadow-md transition-shadow duration-300;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 rounded-gentle bg-cream-dark border border-sage/20 
+           focus:border-sage focus:outline-none focus:ring-2 focus:ring-sage/20 
+           transition-all duration-200;
+  }
+  
+  .risk-badge-high {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium 
+           bg-red-50 text-red-700 border-l-4 border-red-500;
+  }
+  
+  .risk-badge-moderate {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium 
+           bg-yellow-50 text-yellow-800 border-l-4 border-yellow-500;
+  }
+  
+  .risk-badge-low {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium 
+           bg-green-50 text-green-700 border-l-4 border-green-500;
+  }
+}
+/* src/index.css - Add these at the end */
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+}
+
+/* Hide scrollbar but keep functionality */
+.overflow-auto::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.overflow-auto::-webkit-scrollbar-track {
+  background: #F0EAE2;
+}
+
+.overflow-auto::-webkit-scrollbar-thumb {
+  background: #A4B494;
+  border-radius: 3px;
+}
+
+.overflow-auto::-webkit-scrollbar-thumb:hover {
+  background: #8F9E8B;
+}
